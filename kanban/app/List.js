@@ -3,8 +3,8 @@ import Card from './Card';
 
 class List extends Component {
   static propTypes = {
-    title: PropTypes.string,
-    cards: PropTypes.array
+    title: PropTypes.string.isRequired,
+    cards: PropTypes.arrayOf(PropTypes.object)
   }
 
   render() {

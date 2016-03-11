@@ -2,7 +2,8 @@ import React, {Component, PropTypes} from 'react';
 
 class CheckList extends Component {
   static propTypes = {
-    tasks: PropTypes.array
+    cardId: PropTypes.number,
+    tasks: PropTypes.arrayOf(PropTypes.object)
   }
 
   render() {

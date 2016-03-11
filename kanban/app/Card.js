@@ -7,7 +7,7 @@ class Card extends Component {
     description: PropTypes.string,
     color: PropTypes.string,
     id: PropTypes.number,
-    tasks: PropTypes.array
+    tasks: PropTypes.arrayOf(PropTypes.object)
   }
 
   constructor() {
