@@ -5,6 +5,7 @@ class Card extends Component {
   static propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
+    color: PropTypes.string,
     id: PropTypes.number,
     tasks: PropTypes.array
   }
@@ -32,9 +33,22 @@ class Card extends Component {
       );
     }
 
+    const sideColor = {
+      position: 'absolute',
+      zIndex: -1,
+      top: 0,
+      bottom: 0,
+      left: 0,
+      width: 7,
+      backgroundColor: this.props.color
+    };
+
     return (
       <div className='card'>
-        <div className='card_title' onClick={this.toggleDetails.bind(this)}>
+        <div style={sideColor} />
+        <div
+          className={this.state.showDetails ? 'card_title card_title--is-open' : 'card_title'}
+          onClick={this.toggleDetails.bind(this)}>
           {this.props.title}
         </div>
         {cardDetails}

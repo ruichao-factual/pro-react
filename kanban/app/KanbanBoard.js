@@ -3,7 +3,7 @@ import List from './List';
 
 class KanbanBoard extends Component {
   static propTypes = {
-    cards: PropTypes.array.isRequired
+    cards: PropTypes.array
   }
   render() {
     return (
